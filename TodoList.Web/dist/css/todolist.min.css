@@ -1,0 +1,2 @@
+.todolist-container{width:300px;margin:auto;margin-top:60px;padding:10px}ul.check-list{-webkit-padding-start:0}div.check-list-container{width:300px;min-height:200px;text-align:right}li.check-list-item{height:40px;width:225px;3
+    padding-bottom:2px;list-style-type:none;text-align:left}li.check-list-item span.glyphicon{padding:10px}div.controls-container{text-align:right}.spinner{width:128px;height:128px;position:relative;top:75px;left:125px;background-image:url(../img/spinner.gif);background-repeat:no-repeat}

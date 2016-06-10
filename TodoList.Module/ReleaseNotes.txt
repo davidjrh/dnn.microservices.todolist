@@ -1,0 +1,13 @@
+﻿<h3>TodoList</h3>
+<p class="Contributor">
+	David Rodriguez <br />
+	<a href="mailto:davidjrh@hotmail.com">davidjrh@hotmail.com</a><br />
+</p>
+<hr/>
+<div class="License">
+	<h3>About the TodoList</h3>
+	<p class="Owner">
+		<b>Version 1.0.0</b><br /><br />
+	</p>
+	<p>Initial version of the application. This version doesn't have the multi-tenant capability yet</p>
+</div>

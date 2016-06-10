@@ -1,0 +1,658 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6769F81-4EC9-40FE-84B4-A5358A70C887}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TodoList.Web</RootNamespace>
+    <AssemblyName>TodoList.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="dist\css\todolist.min.css" />
+    <Content Include="dist\img\spinner.gif" />
+    <Content Include="dist\js\templates.js" />
+    <Content Include="dist\js\todolist.js" />
+    <Content Include="dist\js\todolist.min.js" />
+    <Content Include="dist\js\todolist.paths.js" />
+    <Content Include="dist\lib\bootstrap\bootstrap.js" />
+    <Content Include="dist\lib\bootstrap\bootstrap.less" />
+    <Content Include="dist\lib\bootstrap\bower.json" />
+    <Content Include="dist\lib\bootstrap\CHANGELOG.md" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="dist\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="dist\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="dist\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="dist\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="dist\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="dist\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="dist\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="dist\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="dist\lib\bootstrap\dist\js\npm.js" />
+    <Content Include="dist\lib\bootstrap\Gruntfile.js" />
+    <Content Include="dist\lib\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="dist\lib\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="dist\lib\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="dist\lib\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="dist\lib\bootstrap\grunt\configBridge.json" />
+    <Content Include="dist\lib\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="dist\lib\bootstrap\js\affix.js" />
+    <Content Include="dist\lib\bootstrap\js\alert.js" />
+    <Content Include="dist\lib\bootstrap\js\button.js" />
+    <Content Include="dist\lib\bootstrap\js\carousel.js" />
+    <Content Include="dist\lib\bootstrap\js\collapse.js" />
+    <Content Include="dist\lib\bootstrap\js\dropdown.js" />
+    <Content Include="dist\lib\bootstrap\js\modal.js" />
+    <Content Include="dist\lib\bootstrap\js\popover.js" />
+    <Content Include="dist\lib\bootstrap\js\scrollspy.js" />
+    <Content Include="dist\lib\bootstrap\js\tab.js" />
+    <Content Include="dist\lib\bootstrap\js\tooltip.js" />
+    <Content Include="dist\lib\bootstrap\js\transition.js" />
+    <Content Include="dist\lib\bootstrap\less\alerts.less" />
+    <Content Include="dist\lib\bootstrap\less\badges.less" />
+    <Content Include="dist\lib\bootstrap\less\bootstrap.less" />
+    <Content Include="dist\lib\bootstrap\less\breadcrumbs.less" />
+    <Content Include="dist\lib\bootstrap\less\button-groups.less" />
+    <Content Include="dist\lib\bootstrap\less\buttons.less" />
+    <Content Include="dist\lib\bootstrap\less\carousel.less" />
+    <Content Include="dist\lib\bootstrap\less\close.less" />
+    <Content Include="dist\lib\bootstrap\less\code.less" />
+    <Content Include="dist\lib\bootstrap\less\component-animations.less" />
+    <Content Include="dist\lib\bootstrap\less\dropdowns.less" />
+    <Content Include="dist\lib\bootstrap\less\forms.less" />
+    <Content Include="dist\lib\bootstrap\less\glyphicons.less" />
+    <Content Include="dist\lib\bootstrap\less\grid.less" />
+    <Content Include="dist\lib\bootstrap\less\input-groups.less" />
+    <Content Include="dist\lib\bootstrap\less\jumbotron.less" />
+    <Content Include="dist\lib\bootstrap\less\labels.less" />
+    <Content Include="dist\lib\bootstrap\less\list-group.less" />
+    <Content Include="dist\lib\bootstrap\less\media.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins.less" />
+    <Content Include="dist\lib\bootstrap\less\modals.less" />
+    <Content Include="dist\lib\bootstrap\less\navbar.less" />
+    <Content Include="dist\lib\bootstrap\less\navs.less" />
+    <Content Include="dist\lib\bootstrap\less\normalize.less" />
+    <Content Include="dist\lib\bootstrap\less\pager.less" />
+    <Content Include="dist\lib\bootstrap\less\pagination.less" />
+    <Content Include="dist\lib\bootstrap\less\panels.less" />
+    <Content Include="dist\lib\bootstrap\less\popovers.less" />
+    <Content Include="dist\lib\bootstrap\less\print.less" />
+    <Content Include="dist\lib\bootstrap\less\progress-bars.less" />
+    <Content Include="dist\lib\bootstrap\less\responsive-embed.less" />
+    <Content Include="dist\lib\bootstrap\less\responsive-utilities.less" />
+    <Content Include="dist\lib\bootstrap\less\scaffolding.less" />
+    <Content Include="dist\lib\bootstrap\less\tables.less" />
+    <Content Include="dist\lib\bootstrap\less\theme.less" />
+    <Content Include="dist\lib\bootstrap\less\thumbnails.less" />
+    <Content Include="dist\lib\bootstrap\less\tooltip.less" />
+    <Content Include="dist\lib\bootstrap\less\type.less" />
+    <Content Include="dist\lib\bootstrap\less\utilities.less" />
+    <Content Include="dist\lib\bootstrap\less\variables.less" />
+    <Content Include="dist\lib\bootstrap\less\wells.less" />
+    <Content Include="dist\lib\bootstrap\LICENSE" />
+    <Content Include="dist\lib\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="dist\lib\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="dist\lib\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="dist\lib\bootstrap\package.js" />
+    <Content Include="dist\lib\bootstrap\package.json" />
+    <Content Include="dist\lib\bootstrap\README.md" />
+    <Content Include="dist\lib\jquery\bower.json" />
+    <Content Include="dist\lib\jquery\dist\jquery.js" />
+    <Content Include="dist\lib\jquery\dist\jquery.min.js" />
+    <Content Include="dist\lib\jquery\dist\jquery.min.map" />
+    <Content Include="dist\lib\jquery\jquery.js" />
+    <Content Include="dist\lib\jquery\MIT-LICENSE.txt" />
+    <Content Include="dist\lib\jquery\src\ajax.js" />
+    <Content Include="dist\lib\jquery\src\ajax\jsonp.js" />
+    <Content Include="dist\lib\jquery\src\ajax\load.js" />
+    <Content Include="dist\lib\jquery\src\ajax\parseJSON.js" />
+    <Content Include="dist\lib\jquery\src\ajax\parseXML.js" />
+    <Content Include="dist\lib\jquery\src\ajax\script.js" />
+    <Content Include="dist\lib\jquery\src\ajax\var\nonce.js" />
+    <Content Include="dist\lib\jquery\src\ajax\var\rquery.js" />
+    <Content Include="dist\lib\jquery\src\ajax\xhr.js" />
+    <Content Include="dist\lib\jquery\src\attributes.js" />
+    <Content Include="dist\lib\jquery\src\attributes\attr.js" />
+    <Content Include="dist\lib\jquery\src\attributes\classes.js" />
+    <Content Include="dist\lib\jquery\src\attributes\prop.js" />
+    <Content Include="dist\lib\jquery\src\attributes\support.js" />
+    <Content Include="dist\lib\jquery\src\attributes\val.js" />
+    <Content Include="dist\lib\jquery\src\callbacks.js" />
+    <Content Include="dist\lib\jquery\src\core.js" />
+    <Content Include="dist\lib\jquery\src\core\access.js" />
+    <Content Include="dist\lib\jquery\src\core\init.js" />
+    <Content Include="dist\lib\jquery\src\core\parseHTML.js" />
+    <Content Include="dist\lib\jquery\src\core\ready.js" />
+    <Content Include="dist\lib\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="dist\lib\jquery\src\css.js" />
+    <Content Include="dist\lib\jquery\src\css\addGetHookIf.js" />
+    <Content Include="dist\lib\jquery\src\css\curCSS.js" />
+    <Content Include="dist\lib\jquery\src\css\defaultDisplay.js" />
+    <Content Include="dist\lib\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="dist\lib\jquery\src\css\support.js" />
+    <Content Include="dist\lib\jquery\src\css\swap.js" />
+    <Content Include="dist\lib\jquery\src\css\var\cssExpand.js" />
+    <Content Include="dist\lib\jquery\src\css\var\getStyles.js" />
+    <Content Include="dist\lib\jquery\src\css\var\isHidden.js" />
+    <Content Include="dist\lib\jquery\src\css\var\rmargin.js" />
+    <Content Include="dist\lib\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="dist\lib\jquery\src\data.js" />
+    <Content Include="dist\lib\jquery\src\data\accepts.js" />
+    <Content Include="dist\lib\jquery\src\data\Data.js" />
+    <Content Include="dist\lib\jquery\src\data\var\data_priv.js" />
+    <Content Include="dist\lib\jquery\src\data\var\data_user.js" />
+    <Content Include="dist\lib\jquery\src\deferred.js" />
+    <Content Include="dist\lib\jquery\src\deprecated.js" />
+    <Content Include="dist\lib\jquery\src\dimensions.js" />
+    <Content Include="dist\lib\jquery\src\effects.js" />
+    <Content Include="dist\lib\jquery\src\effects\animatedSelector.js" />
+    <Content Include="dist\lib\jquery\src\effects\Tween.js" />
+    <Content Include="dist\lib\jquery\src\event.js" />
+    <Content Include="dist\lib\jquery\src\event\ajax.js" />
+    <Content Include="dist\lib\jquery\src\event\alias.js" />
+    <Content Include="dist\lib\jquery\src\event\support.js" />
+    <Content Include="dist\lib\jquery\src\exports\amd.js" />
+    <Content Include="dist\lib\jquery\src\exports\global.js" />
+    <Content Include="dist\lib\jquery\src\intro.js" />
+    <Content Include="dist\lib\jquery\src\jquery.js" />
+    <Content Include="dist\lib\jquery\src\manipulation.js" />
+    <Content Include="dist\lib\jquery\src\manipulation\support.js" />
+    <Content Include="dist\lib\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="dist\lib\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="dist\lib\jquery\src\offset.js" />
+    <Content Include="dist\lib\jquery\src\outro.js" />
+    <Content Include="dist\lib\jquery\src\queue.js" />
+    <Content Include="dist\lib\jquery\src\queue\delay.js" />
+    <Content Include="dist\lib\jquery\src\selector-native.js" />
+    <Content Include="dist\lib\jquery\src\selector-sizzle.js" />
+    <Content Include="dist\lib\jquery\src\selector.js" />
+    <Content Include="dist\lib\jquery\src\serialize.js" />
+    <Content Include="dist\lib\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="dist\lib\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="dist\lib\jquery\src\traversing.js" />
+    <Content Include="dist\lib\jquery\src\traversing\findFilter.js" />
+    <Content Include="dist\lib\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="dist\lib\jquery\src\var\arr.js" />
+    <Content Include="dist\lib\jquery\src\var\class2type.js" />
+    <Content Include="dist\lib\jquery\src\var\concat.js" />
+    <Content Include="dist\lib\jquery\src\var\hasOwn.js" />
+    <Content Include="dist\lib\jquery\src\var\indexOf.js" />
+    <Content Include="dist\lib\jquery\src\var\pnum.js" />
+    <Content Include="dist\lib\jquery\src\var\push.js" />
+    <Content Include="dist\lib\jquery\src\var\rnotwhite.js" />
+    <Content Include="dist\lib\jquery\src\var\slice.js" />
+    <Content Include="dist\lib\jquery\src\var\strundefined.js" />
+    <Content Include="dist\lib\jquery\src\var\support.js" />
+    <Content Include="dist\lib\jquery\src\var\toString.js" />
+    <Content Include="dist\lib\jquery\src\wrap.js" />
+    <Content Include="dist\lib\knockout\bower.json" />
+    <Content Include="dist\lib\knockout\build\fragments\amd-post.js" />
+    <Content Include="dist\lib\knockout\build\fragments\amd-pre.js" />
+    <Content Include="dist\lib\knockout\build\fragments\extern-post.js" />
+    <Content Include="dist\lib\knockout\build\fragments\extern-pre.js" />
+    <Content Include="dist\lib\knockout\build\fragments\source-references.js" />
+    <Content Include="dist\lib\knockout\build\knockout-raw.js" />
+    <Content Include="dist\lib\knockout\dist\knockout.debug.js" />
+    <Content Include="dist\lib\knockout\dist\knockout.js" />
+    <Content Include="dist\lib\knockout\Gruntfile.js" />
+    <Content Include="dist\lib\knockout\knockout.js" />
+    <Content Include="dist\lib\knockout\LICENSE" />
+    <Content Include="dist\lib\knockout\package.json" />
+    <Content Include="dist\lib\knockout\README.md" />
+    <Content Include="dist\lib\knockout\src\binding\bindingAttributeSyntax.js" />
+    <Content Include="dist\lib\knockout\src\binding\bindingProvider.js" />
+    <Content Include="dist\lib\knockout\src\binding\expressionRewriting.js" />
+    <Content Include="dist\lib\knockout\src\binding\selectExtensions.js" />
+    <Content Include="dist\lib\knockout\src\components\componentBinding.js" />
+    <Content Include="dist\lib\knockout\src\components\customElements.js" />
+    <Content Include="dist\lib\knockout\src\components\defaultLoader.js" />
+    <Content Include="dist\lib\knockout\src\components\loaderRegistry.js" />
+    <Content Include="dist\lib\knockout\src\google-closure-compiler-utils.js" />
+    <Content Include="dist\lib\knockout\src\memoization.js" />
+    <Content Include="dist\lib\knockout\src\namespace.js" />
+    <Content Include="dist\lib\knockout\src\options.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\dependencyDetection.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\dependentObservable.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\extenders.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\mappingHelpers.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\observable.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\observableArray.changeTracking.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\observableArray.js" />
+    <Content Include="dist\lib\knockout\src\subscribables\subscribable.js" />
+    <Content Include="dist\lib\knockout\src\tasks.js" />
+    <Content Include="dist\lib\knockout\src\templating\templateEngine.js" />
+    <Content Include="dist\lib\knockout\src\templating\templateRewriting.js" />
+    <Content Include="dist\lib\knockout\src\templating\templateSources.js" />
+    <Content Include="dist\lib\knockout\src\templating\templating.js" />
+    <Content Include="dist\lib\knockout\src\utils.domData.js" />
+    <Content Include="dist\lib\knockout\src\utils.domManipulation.js" />
+    <Content Include="dist\lib\knockout\src\utils.domNodeDisposal.js" />
+    <Content Include="dist\lib\knockout\src\utils.js" />
+    <Content Include="dist\lib\knockout\src\version.js" />
+    <Content Include="dist\lib\knockout\src\virtualElements.js" />
+    <Content Include="dist\test.html" />
+    <Content Include="gruntfile.js" />
+    <Content Include="package.json" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="src\js\todolist.paths.js" />
+    <Content Include="src\lib\bootstrap\bootstrap.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\alerts.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\buttons.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\center-block.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\forms.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\gradients.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\grid.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\image.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\labels.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\list-group.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\opacity.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\pagination.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\panels.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\resize.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\size.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\table-row.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="dist\lib\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="dist\lib\jquery\src\sizzle\dist\sizzle.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\css\todolist.css" />
+    <Content Include="src\css\todolist.min.css" />
+    <Content Include="src\img\spinner.gif" />
+    <Content Include="src\index.html">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="src\js\templates.js" />
+    <Content Include="src\js\todolist.js" />
+    <Content Include="src\js\todolist.min.js" />
+    <Content Include="src\lib\bootstrap\.bower.json" />
+    <Content Include="src\lib\bootstrap\bootstrap.js" />
+    <Content Include="src\lib\bootstrap\bower.json" />
+    <Content Include="src\lib\bootstrap\CHANGELOG.md" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="src\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="src\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="src\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="src\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="src\lib\bootstrap\dist\js\npm.js" />
+    <Content Include="src\lib\bootstrap\Gruntfile.js" />
+    <Content Include="src\lib\bootstrap\grunt\.jshintrc" />
+    <Content Include="src\lib\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="src\lib\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="src\lib\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="src\lib\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="src\lib\bootstrap\grunt\configBridge.json" />
+    <Content Include="src\lib\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="src\lib\bootstrap\js\.jscsrc" />
+    <Content Include="src\lib\bootstrap\js\.jshintrc" />
+    <Content Include="src\lib\bootstrap\js\affix.js" />
+    <Content Include="src\lib\bootstrap\js\alert.js" />
+    <Content Include="src\lib\bootstrap\js\button.js" />
+    <Content Include="src\lib\bootstrap\js\carousel.js" />
+    <Content Include="src\lib\bootstrap\js\collapse.js" />
+    <Content Include="src\lib\bootstrap\js\dropdown.js" />
+    <Content Include="src\lib\bootstrap\js\modal.js" />
+    <Content Include="src\lib\bootstrap\js\popover.js" />
+    <Content Include="src\lib\bootstrap\js\scrollspy.js" />
+    <Content Include="src\lib\bootstrap\js\tab.js" />
+    <Content Include="src\lib\bootstrap\js\tooltip.js" />
+    <Content Include="src\lib\bootstrap\js\transition.js" />
+    <Content Include="src\lib\bootstrap\less\.csscomb.json" />
+    <Content Include="src\lib\bootstrap\less\.csslintrc" />
+    <Content Include="src\lib\bootstrap\less\alerts.less" />
+    <Content Include="src\lib\bootstrap\less\badges.less" />
+    <Content Include="src\lib\bootstrap\less\bootstrap.less" />
+    <Content Include="src\lib\bootstrap\less\breadcrumbs.less" />
+    <Content Include="src\lib\bootstrap\less\button-groups.less" />
+    <Content Include="src\lib\bootstrap\less\buttons.less" />
+    <Content Include="src\lib\bootstrap\less\carousel.less" />
+    <Content Include="src\lib\bootstrap\less\close.less" />
+    <Content Include="src\lib\bootstrap\less\code.less" />
+    <Content Include="src\lib\bootstrap\less\component-animations.less" />
+    <Content Include="src\lib\bootstrap\less\dropdowns.less" />
+    <Content Include="src\lib\bootstrap\less\forms.less" />
+    <Content Include="src\lib\bootstrap\less\glyphicons.less" />
+    <Content Include="src\lib\bootstrap\less\grid.less" />
+    <Content Include="src\lib\bootstrap\less\input-groups.less" />
+    <Content Include="src\lib\bootstrap\less\jumbotron.less" />
+    <Content Include="src\lib\bootstrap\less\labels.less" />
+    <Content Include="src\lib\bootstrap\less\list-group.less" />
+    <Content Include="src\lib\bootstrap\less\media.less" />
+    <Content Include="src\lib\bootstrap\less\mixins.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\alerts.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\buttons.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\center-block.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\forms.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\gradients.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\grid.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\image.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\labels.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\list-group.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\opacity.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\pagination.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\panels.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\resize.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\size.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\table-row.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="src\lib\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="src\lib\bootstrap\less\modals.less" />
+    <Content Include="src\lib\bootstrap\less\navbar.less" />
+    <Content Include="src\lib\bootstrap\less\navs.less" />
+    <Content Include="src\lib\bootstrap\less\normalize.less" />
+    <Content Include="src\lib\bootstrap\less\pager.less" />
+    <Content Include="src\lib\bootstrap\less\pagination.less" />
+    <Content Include="src\lib\bootstrap\less\panels.less" />
+    <Content Include="src\lib\bootstrap\less\popovers.less" />
+    <Content Include="src\lib\bootstrap\less\print.less" />
+    <Content Include="src\lib\bootstrap\less\progress-bars.less" />
+    <Content Include="src\lib\bootstrap\less\responsive-embed.less" />
+    <Content Include="src\lib\bootstrap\less\responsive-utilities.less" />
+    <Content Include="src\lib\bootstrap\less\scaffolding.less" />
+    <Content Include="src\lib\bootstrap\less\tables.less" />
+    <Content Include="src\lib\bootstrap\less\theme.less" />
+    <Content Include="src\lib\bootstrap\less\thumbnails.less" />
+    <Content Include="src\lib\bootstrap\less\tooltip.less" />
+    <Content Include="src\lib\bootstrap\less\type.less" />
+    <Content Include="src\lib\bootstrap\less\utilities.less" />
+    <Content Include="src\lib\bootstrap\less\variables.less" />
+    <Content Include="src\lib\bootstrap\less\wells.less" />
+    <Content Include="src\lib\bootstrap\LICENSE" />
+    <Content Include="src\lib\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="src\lib\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="src\lib\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="src\lib\bootstrap\package.js" />
+    <Content Include="src\lib\bootstrap\package.json" />
+    <Content Include="src\lib\bootstrap\README.md" />
+    <Content Include="src\lib\jquery\.bower.json" />
+    <Content Include="src\lib\jquery\bower.json" />
+    <Content Include="src\lib\jquery\dist\jquery.js" />
+    <Content Include="src\lib\jquery\dist\jquery.min.js" />
+    <Content Include="src\lib\jquery\dist\jquery.min.map" />
+    <Content Include="src\lib\jquery\jquery.js" />
+    <Content Include="src\lib\jquery\MIT-LICENSE.txt" />
+    <Content Include="src\lib\jquery\src\ajax.js" />
+    <Content Include="src\lib\jquery\src\ajax\jsonp.js" />
+    <Content Include="src\lib\jquery\src\ajax\load.js" />
+    <Content Include="src\lib\jquery\src\ajax\parseJSON.js" />
+    <Content Include="src\lib\jquery\src\ajax\parseXML.js" />
+    <Content Include="src\lib\jquery\src\ajax\script.js" />
+    <Content Include="src\lib\jquery\src\ajax\var\nonce.js" />
+    <Content Include="src\lib\jquery\src\ajax\var\rquery.js" />
+    <Content Include="src\lib\jquery\src\ajax\xhr.js" />
+    <Content Include="src\lib\jquery\src\attributes.js" />
+    <Content Include="src\lib\jquery\src\attributes\attr.js" />
+    <Content Include="src\lib\jquery\src\attributes\classes.js" />
+    <Content Include="src\lib\jquery\src\attributes\prop.js" />
+    <Content Include="src\lib\jquery\src\attributes\support.js" />
+    <Content Include="src\lib\jquery\src\attributes\val.js" />
+    <Content Include="src\lib\jquery\src\callbacks.js" />
+    <Content Include="src\lib\jquery\src\core.js" />
+    <Content Include="src\lib\jquery\src\core\access.js" />
+    <Content Include="src\lib\jquery\src\core\init.js" />
+    <Content Include="src\lib\jquery\src\core\parseHTML.js" />
+    <Content Include="src\lib\jquery\src\core\ready.js" />
+    <Content Include="src\lib\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="src\lib\jquery\src\css.js" />
+    <Content Include="src\lib\jquery\src\css\addGetHookIf.js" />
+    <Content Include="src\lib\jquery\src\css\curCSS.js" />
+    <Content Include="src\lib\jquery\src\css\defaultDisplay.js" />
+    <Content Include="src\lib\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="src\lib\jquery\src\css\support.js" />
+    <Content Include="src\lib\jquery\src\css\swap.js" />
+    <Content Include="src\lib\jquery\src\css\var\cssExpand.js" />
+    <Content Include="src\lib\jquery\src\css\var\getStyles.js" />
+    <Content Include="src\lib\jquery\src\css\var\isHidden.js" />
+    <Content Include="src\lib\jquery\src\css\var\rmargin.js" />
+    <Content Include="src\lib\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="src\lib\jquery\src\data.js" />
+    <Content Include="src\lib\jquery\src\data\accepts.js" />
+    <Content Include="src\lib\jquery\src\data\Data.js" />
+    <Content Include="src\lib\jquery\src\data\var\data_priv.js" />
+    <Content Include="src\lib\jquery\src\data\var\data_user.js" />
+    <Content Include="src\lib\jquery\src\deferred.js" />
+    <Content Include="src\lib\jquery\src\deprecated.js" />
+    <Content Include="src\lib\jquery\src\dimensions.js" />
+    <Content Include="src\lib\jquery\src\effects.js" />
+    <Content Include="src\lib\jquery\src\effects\animatedSelector.js" />
+    <Content Include="src\lib\jquery\src\effects\Tween.js" />
+    <Content Include="src\lib\jquery\src\event.js" />
+    <Content Include="src\lib\jquery\src\event\ajax.js" />
+    <Content Include="src\lib\jquery\src\event\alias.js" />
+    <Content Include="src\lib\jquery\src\event\support.js" />
+    <Content Include="src\lib\jquery\src\exports\amd.js" />
+    <Content Include="src\lib\jquery\src\exports\global.js" />
+    <Content Include="src\lib\jquery\src\intro.js" />
+    <Content Include="src\lib\jquery\src\jquery.js" />
+    <Content Include="src\lib\jquery\src\manipulation.js" />
+    <Content Include="src\lib\jquery\src\manipulation\support.js" />
+    <Content Include="src\lib\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="src\lib\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="src\lib\jquery\src\offset.js" />
+    <Content Include="src\lib\jquery\src\outro.js" />
+    <Content Include="src\lib\jquery\src\queue.js" />
+    <Content Include="src\lib\jquery\src\queue\delay.js" />
+    <Content Include="src\lib\jquery\src\selector-native.js" />
+    <Content Include="src\lib\jquery\src\selector-sizzle.js" />
+    <Content Include="src\lib\jquery\src\selector.js" />
+    <Content Include="src\lib\jquery\src\serialize.js" />
+    <Content Include="src\lib\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="src\lib\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="src\lib\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="src\lib\jquery\src\traversing.js" />
+    <Content Include="src\lib\jquery\src\traversing\findFilter.js" />
+    <Content Include="src\lib\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="src\lib\jquery\src\var\arr.js" />
+    <Content Include="src\lib\jquery\src\var\class2type.js" />
+    <Content Include="src\lib\jquery\src\var\concat.js" />
+    <Content Include="src\lib\jquery\src\var\hasOwn.js" />
+    <Content Include="src\lib\jquery\src\var\indexOf.js" />
+    <Content Include="src\lib\jquery\src\var\pnum.js" />
+    <Content Include="src\lib\jquery\src\var\push.js" />
+    <Content Include="src\lib\jquery\src\var\rnotwhite.js" />
+    <Content Include="src\lib\jquery\src\var\slice.js" />
+    <Content Include="src\lib\jquery\src\var\strundefined.js" />
+    <Content Include="src\lib\jquery\src\var\support.js" />
+    <Content Include="src\lib\jquery\src\var\toString.js" />
+    <Content Include="src\lib\jquery\src\wrap.js" />
+    <Content Include="src\lib\knockout\.bower.json" />
+    <Content Include="src\lib\knockout\bower.json" />
+    <Content Include="src\lib\knockout\build\fragments\amd-post.js" />
+    <Content Include="src\lib\knockout\build\fragments\amd-pre.js" />
+    <Content Include="src\lib\knockout\build\fragments\extern-post.js" />
+    <Content Include="src\lib\knockout\build\fragments\extern-pre.js" />
+    <Content Include="src\lib\knockout\build\fragments\source-references.js" />
+    <Content Include="src\lib\knockout\build\knockout-raw.js" />
+    <Content Include="src\lib\knockout\dist\knockout.debug.js" />
+    <Content Include="src\lib\knockout\dist\knockout.js" />
+    <Content Include="src\lib\knockout\Gruntfile.js" />
+    <Content Include="src\lib\knockout\knockout.js" />
+    <Content Include="src\lib\knockout\LICENSE" />
+    <Content Include="src\lib\knockout\package.json" />
+    <Content Include="src\lib\knockout\README.md" />
+    <Content Include="src\lib\knockout\src\binding\bindingAttributeSyntax.js" />
+    <Content Include="src\lib\knockout\src\binding\bindingProvider.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\attr.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\checked.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\click.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\css.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\enableDisable.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\event.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\foreach.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\hasfocus.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\html.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\ifIfnotWith.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\options.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\selectedOptions.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\style.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\submit.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\text.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\textInput.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\uniqueName.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\value.js" />
+    <Content Include="src\lib\knockout\src\binding\defaultBindings\visible.js" />
+    <Content Include="src\lib\knockout\src\binding\editDetection\arrayToDomNodeChildren.js" />
+    <Content Include="src\lib\knockout\src\binding\editDetection\compareArrays.js" />
+    <Content Include="src\lib\knockout\src\binding\expressionRewriting.js" />
+    <Content Include="src\lib\knockout\src\binding\selectExtensions.js" />
+    <Content Include="src\lib\knockout\src\components\componentBinding.js" />
+    <Content Include="src\lib\knockout\src\components\customElements.js" />
+    <Content Include="src\lib\knockout\src\components\defaultLoader.js" />
+    <Content Include="src\lib\knockout\src\components\loaderRegistry.js" />
+    <Content Include="src\lib\knockout\src\google-closure-compiler-utils.js" />
+    <Content Include="src\lib\knockout\src\memoization.js" />
+    <Content Include="src\lib\knockout\src\namespace.js" />
+    <Content Include="src\lib\knockout\src\options.js" />
+    <Content Include="src\lib\knockout\src\subscribables\dependencyDetection.js" />
+    <Content Include="src\lib\knockout\src\subscribables\dependentObservable.js" />
+    <Content Include="src\lib\knockout\src\subscribables\extenders.js" />
+    <Content Include="src\lib\knockout\src\subscribables\mappingHelpers.js" />
+    <Content Include="src\lib\knockout\src\subscribables\observable.js" />
+    <Content Include="src\lib\knockout\src\subscribables\observableArray.changeTracking.js" />
+    <Content Include="src\lib\knockout\src\subscribables\observableArray.js" />
+    <Content Include="src\lib\knockout\src\subscribables\subscribable.js" />
+    <Content Include="src\lib\knockout\src\tasks.js" />
+    <Content Include="src\lib\knockout\src\templating\jquery.tmpl\jqueryTmplTemplateEngine.js" />
+    <Content Include="src\lib\knockout\src\templating\native\nativeTemplateEngine.js" />
+    <Content Include="src\lib\knockout\src\templating\templateEngine.js" />
+    <Content Include="src\lib\knockout\src\templating\templateRewriting.js" />
+    <Content Include="src\lib\knockout\src\templating\templateSources.js" />
+    <Content Include="src\lib\knockout\src\templating\templating.js" />
+    <Content Include="src\lib\knockout\src\utils.domData.js" />
+    <Content Include="src\lib\knockout\src\utils.domManipulation.js" />
+    <Content Include="src\lib\knockout\src\utils.domNodeDisposal.js" />
+    <Content Include="src\lib\knockout\src\utils.js" />
+    <Content Include="src\lib\knockout\src\version.js" />
+    <Content Include="src\lib\knockout\src\virtualElements.js" />
+    <Content Include="src\test.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist\lib\knockout\src\binding\defaultBindings\" />
+    <Folder Include="dist\lib\knockout\src\binding\editDetection\" />
+    <Folder Include="dist\lib\knockout\src\templating\jquery.tmpl\" />
+    <Folder Include="dist\lib\knockout\src\templating\native\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21250/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release'">
+    <Exec Command="cmd.exe /c grunt -b &quot;$(MSBuildProjectDirectory)&quot; --gruntfile &quot;$(MSBuildProjectDirectory)\Gruntfile.js&quot; build --no-color">
+    </Exec>
+    <Exec Command="cmd.exe /c ..\Utilities\MSDeploy\msdeploy.exe -verb:sync -source:contentPath=&quot;$(MSBuildProjectDirectory)\dist&quot; -dest:package=&quot;$(SolutionDir)Install\$(MSBuildProjectName).zip&quot;">
+    </Exec>
+  </Target>
+</Project>

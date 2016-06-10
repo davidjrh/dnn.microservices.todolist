@@ -1,0 +1,36 @@
+﻿{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+    "siteName": {
+      "value": "mytodolist"
+    },
+    "hostingPlanName": {
+      "value": "mytodolist-whp"
+    },
+    "siteLocation": {
+      "value": "West US"
+    },
+    "sqlServerName": {
+      "value": "mytodolistserver"
+    },
+    "sqlServerLocation": {
+      "value": "West US"
+    },
+    "sqlServerAdminLogin": {
+      "value": "mytodolistadmin"
+    },
+    "sqlServerAdminPassword": {
+      "value": "CLl$1MH_vu:iYMk4"
+    },
+    "sqlDbName": {
+      "value": "mytodolistdb"
+    },
+    "sku": {
+      "value": "Basic"
+    },
+    "sqlDbEdition": {
+      "value": "Basic"
+    }
+  }
+}

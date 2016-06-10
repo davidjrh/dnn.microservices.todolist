@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.API", "TodoList.API\TodoList.API.csproj", "{2E458638-1F3F-4D43-963A-D12150619DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.API.Tests", "TodoList.API.Tests\TodoList.API.Tests.csproj", "{54A39D19-E11A-4299-9783-C681930E002D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{BAF034D9-D51F-41E5-B9C3-FC8A15C79961}"
+	ProjectSection(SolutionItems) = preProject
+		Build.proj = Build.proj
+		.build\MSBuild.Community.Tasks.dll = .build\MSBuild.Community.Tasks.dll
+		.build\MSBuild.Community.Tasks.targets = .build\MSBuild.Community.Tasks.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Web", "TodoList.Web\TodoList.Web.csproj", "{B6769F81-4EC9-40FE-84B4-A5358A70C887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Module", "TodoList.Module\TodoList.Module.csproj", "{7D61A32C-0F21-453F-A981-BD8E5A3A5304}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "TodoList.Deploy", "TodoList.Deploy\TodoList.Deploy.deployproj", "{A1B382BF-16D4-4721-A620-16DA9B452E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.API.Client", "TodoList.API.Client\TodoList.API.Client.csproj", "{ECE01B73-6E2D-40E2-BA4B-D1FADA02D296}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice", "Microservice", "{C474A4B4-3238-4FED-A898-29DF84B46DCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{FFEE4FA8-CEF0-42A8-B9C6-8ED218609512}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DNN", "DNN", "{05019902-4C37-4F7F-ADA2-A2741D6F47A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Html", "Html", "{728B52E0-B028-432C-BE9E-8FE868CEEB73}"
+	ProjectSection(SolutionItems) = preProject
+		TodoList.Web\dist\test.html = TodoList.Web\dist\test.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wordpress", "Wordpress", "{D45724DA-4CD6-42AC-B6D9-937C4E3B95FF}"
+	ProjectSection(SolutionItems) = preProject
+		TodoList.Wordpress\todolist.php = TodoList.Wordpress\todolist.php
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E458638-1F3F-4D43-963A-D12150619DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E458638-1F3F-4D43-963A-D12150619DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E458638-1F3F-4D43-963A-D12150619DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E458638-1F3F-4D43-963A-D12150619DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A39D19-E11A-4299-9783-C681930E002D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A39D19-E11A-4299-9783-C681930E002D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A39D19-E11A-4299-9783-C681930E002D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A39D19-E11A-4299-9783-C681930E002D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6769F81-4EC9-40FE-84B4-A5358A70C887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6769F81-4EC9-40FE-84B4-A5358A70C887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6769F81-4EC9-40FE-84B4-A5358A70C887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6769F81-4EC9-40FE-84B4-A5358A70C887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B382BF-16D4-4721-A620-16DA9B452E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B382BF-16D4-4721-A620-16DA9B452E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B382BF-16D4-4721-A620-16DA9B452E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B382BF-16D4-4721-A620-16DA9B452E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE01B73-6E2D-40E2-BA4B-D1FADA02D296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE01B73-6E2D-40E2-BA4B-D1FADA02D296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE01B73-6E2D-40E2-BA4B-D1FADA02D296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE01B73-6E2D-40E2-BA4B-D1FADA02D296}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E458638-1F3F-4D43-963A-D12150619DA1} = {C474A4B4-3238-4FED-A898-29DF84B46DCC}
+		{54A39D19-E11A-4299-9783-C681930E002D} = {C474A4B4-3238-4FED-A898-29DF84B46DCC}
+		{B6769F81-4EC9-40FE-84B4-A5358A70C887} = {C474A4B4-3238-4FED-A898-29DF84B46DCC}
+		{7D61A32C-0F21-453F-A981-BD8E5A3A5304} = {05019902-4C37-4F7F-ADA2-A2741D6F47A8}
+		{A1B382BF-16D4-4721-A620-16DA9B452E3D} = {C474A4B4-3238-4FED-A898-29DF84B46DCC}
+		{ECE01B73-6E2D-40E2-BA4B-D1FADA02D296} = {C474A4B4-3238-4FED-A898-29DF84B46DCC}
+		{05019902-4C37-4F7F-ADA2-A2741D6F47A8} = {FFEE4FA8-CEF0-42A8-B9C6-8ED218609512}
+		{728B52E0-B028-432C-BE9E-8FE868CEEB73} = {FFEE4FA8-CEF0-42A8-B9C6-8ED218609512}
+		{D45724DA-4CD6-42AC-B6D9-937C4E3B95FF} = {FFEE4FA8-CEF0-42A8-B9C6-8ED218609512}
+	EndGlobalSection
+EndGlobal

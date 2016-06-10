@@ -1,0 +1,26 @@
+﻿<div id="TodoList" class="todolist-container" data-bind="with: dnnservices.todoList">
+  <h1>
+    <span class="glyphicon glyphicon-list-alt"></span> To Do List
+  </h1>
+  <div class="spinner" data-bind="visible: loading()" ></div>
+  <div class="check-list-container">
+      <div class="check-list-item-container">
+          <ul class="check-list">
+              <!-- ko foreach: items -->
+              <li class="check-list-item" data-bind="visible: !Complete(), click: completeTask">
+                  <span class="glyphicon glyphicon-check" aria-hidden="false"></span>
+                  <span data-bind="text: Text"></span>
+              </li>
+              <!-- /ko -->
+          </ul>
+      </div>
+  </div>
+
+  <hr class="" />
+  <div class="controls-container">
+    <div class="form-group">
+      <input id="Text" type="text" class="form-control" placeholder="Task"/>
+      <button class="dnnPrimaryAction" data-bind="click: addItem">Add Item</button>
+    </div>
+  </div>
+</div>

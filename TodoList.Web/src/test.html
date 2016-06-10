@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+<div style="border: 1px solid red" id="container"></div>
+    <script language="javascript" src="lib/jquery/jquery.js"></script>
+    <script language="javascript" src="lib/knockout/knockout.js"></script>
+
+    <script language="javascript" src="js/todolist.min.js"></script>
+
+    <script type="text/javascript">
+        var todoListMgr = new dnnservices.TodoListManager(
+            {
+                container: document.all["container"],
+                loaddependencies: true
+            });
+        window.onload = function() {
+            todoListMgr.init();
+        }
+    </script>
+</body>
+</html>
