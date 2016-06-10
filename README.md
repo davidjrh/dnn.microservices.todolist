@@ -1,6 +1,8 @@
 # Dnn.Microservices.TodoList
 This is a microservice sample project including DNN Platform integration
 
+This is the project that Cesar Abreu and me shared at the DNN Connect 2016 session. Check http://es.slideshare.net/davidjrh/getting-started-with-microservices
+
 There is a new Visual Studio template to develop API Apps, including the swagger framework for documentation and discovery for the microservices APIs. Running API Apps helps on three specific features:
 * Integrated support for API metadata
 * CORS support
